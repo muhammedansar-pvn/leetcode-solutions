@@ -3,15 +3,16 @@
  * @return {number}
  */
 var finalValueAfterOperations = function(operations) {
-    let x = 0;
-
-    for (let operation of operations) {
-        if (operation === "--X" || operation === "X--") {
-            x--;
-        } else {
-            x++;
+    let X=0;
+    let l= operations.length;
+    for(let i of operations){
+        if(i === '--X' || i=== 'X--') {
+            X--;
+        }
+        else{
+            X++;
         }
     }
-
-    return x;
+    return X;
+    
 };
